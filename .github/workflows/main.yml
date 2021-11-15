@@ -16,10 +16,6 @@ jobs:
       run: |
         git clone --depth=1 https://github.com/acidanthera/MacKernelSDK.git
 
-    - name: Debug Build
-      run: |
-        xcodebuild -scheme "IntelBluetoothFirmware" -configuration Debug | xcpretty && exit ${PIPESTATUS[0]}
-
     - name: Release Build
       run: |
         xcodebuild -scheme "IntelBluetoothFirmware" -configuration Release | xcpretty && exit ${PIPESTATUS[0]}
